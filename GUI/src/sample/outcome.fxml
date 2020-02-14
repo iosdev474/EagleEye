@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2A363F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Outcome">
+   <children>
+      <Label layoutX="329.0" layoutY="42.0" prefHeight="47.0" prefWidth="180.0" text="Outcome" textFill="WHITE">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Pane fx:id="ct" prefHeight="600.0" prefWidth="800.0" visible="false">
+         <children>
+            <HBox layoutX="50.0" layoutY="100.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p1" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p1kill" fill="#00ffea" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p1death" fill="#00ffea" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p1name" fill="#00ffea" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="200.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p2" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p2kill" fill="#00ffea" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p2death" fill="#00ffea" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p2name" fill="#00ffea" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="300.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p3" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p3kill" fill="#00ffea" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p3death" fill="#00ffea" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p3name" fill="#00ffea" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="400.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p4" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p4kill" fill="#00ffea" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p4death" fill="#00ffea" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p4name" fill="#00ffea" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="500.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p5" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p5kill" fill="#00ffea" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p5death" fill="#00ffea" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p5name" fill="#00ffea" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane fx:id="t" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <HBox layoutX="50.0" layoutY="100.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p6" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p6kill" fill="#ffc100" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p6death" fill="#ffc100" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p6name" fill="#ffc100" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="200.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p7" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p7kill" fill="#ffc100" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p7death" fill="#ffc100" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p7name" fill="#ffc100" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="300.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p8" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p8kill" fill="#ffc100" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p8death" fill="#ffc100" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p8name" fill="#ffc100" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="400.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p9" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p9kill" fill="#ffc100" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p9death" fill="#ffc100" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p9name" fill="#ffc100" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton fx:id="p1more31" buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="500.0" prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fx:id="p10" fitHeight="56.0" fitWidth="64.0" layoutX="37.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@tick.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="p10kill" fill="#ffc100" layoutX="15.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kills: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="p10death" fill="#ffc100" layoutX="15.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deaths: 999" wrappingWidth="270.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Line endX="200.0" fill="#67ffc8" layoutX="100.0" layoutY="31.0" startX="-100.0" stroke="#67ffc8" />
+                        <Text fx:id="p10name" fill="#ffc100" layoutX="86.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name" textAlignment="CENTER" wrappingWidth="128.0">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="54.0" layoutY="20.0" ripplerFill="#67ffc8" style="-fx-background-color: #67ffc8;" text="More Information" textFill="#2a363f">
+                           <font>
+                              <Font name="Consolas Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Circle fill="RED" layoutX="777.0" layoutY="23.0" onMouseClicked="#close" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#fcfc00" layoutX="748.0" layoutY="23.0" onMouseClicked="#minimize" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
