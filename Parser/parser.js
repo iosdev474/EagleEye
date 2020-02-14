@@ -13,7 +13,7 @@ fs.readFile("test.dem", (err, buffer) => {
       }
     }
   });
-
+  /*
   demoFile.gameEvents.on("player_hurt", e => {
     if(myID != -1 && e.attacker==myID){
       const attacker = demoFile.entities.getByUserId(e.attacker);
@@ -28,14 +28,15 @@ fs.readFile("test.dem", (err, buffer) => {
       });
     }
   });
-
+  */
   demoFile.gameEvents.on("player_death", e => {
     if(myID != -1 && e.attacker==myID){
       const attacker = demoFile.entities.getByUserId(e.attacker);
       const attackerName = attacker ? attacker.name : "unnamed";
       const victim = demoFile.entities.getByUserId(e.userid);
       const victimName = victim ? victim.name : "unnamed";
-      data = attacker.position.x + "," + attacker.position.y + "," + attacker.position.z + "," + attacker.eyeAngles.pitch + "," + attacker.eyeAngles.yaw + "," + (attacker.isDucked?"1":"0") + "," + victim.position.x + "," + victim.position.y + "," + victim.position.z + "," + victim.eyeAngles.pitch + "," + victim.eyeAngles.yaw + "," + (victim.isDucked?"1":"0") + "," + e.penetrated + "," + (e.headshot?"1":"0") + "\n";
+      //attacker_x,attacker_y,attacker_z,attacker_pitch,attacker_yaw,attacker_ducked,victim_x,victim_y,victim_z,victim_pitch,victim_yaw,victim_ducked,wallbang,isHeadshot,isHacker
+      data = attacker.position.x + "," + attacker.position.y + "," + attacker.position.z + "," + attacker.eyeAngles.pitch + "," + attacker.eyeAngles.yaw + "," + (attacker.isDucked?"1":"0") + "," + victim.position.x + "," + victim.position.y + "," + victim.position.z + "," + victim.eyeAngles.pitch + "," + victim.eyeAngles.yaw + "," + (victim.isDucked?"1":"0") + "," + e.penetrated + "," + (e.headshot?"1":"0") + "," + "0" + "\n";
 
       fs.appendFile("data_kill.txt", data, (err) => {
         if (err) console.log(err);
