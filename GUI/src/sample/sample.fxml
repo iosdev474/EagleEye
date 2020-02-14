@@ -1,8 +1,34 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2A363F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <JFXButton layoutX="564.0" layoutY="173.0" onAction="#modelSelect" prefHeight="47.0" prefWidth="110.0" style="-fx-background-color: #1bf2b9; -fx-background-radius: 15;" text="Browse" />
+      <JFXButton layoutX="564.0" layoutY="277.0" onAction="#demoSelect" prefHeight="47.0" prefWidth="110.0" style="-fx-background-color: #1bf2b9; -fx-background-radius: 15;" text="Browse" />
+      <Label layoutX="92.0" layoutY="173.0" prefHeight="47.0" prefWidth="204.0" text="Select a Model:" textFill="#fff9f9">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="277.0" prefHeight="47.0" prefWidth="194.0" text="Select a Demo File:" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="329.0" layoutY="42.0" prefHeight="47.0" prefWidth="180.0" text="EagleEye" textFill="WHITE">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="364.0" layoutY="422.0" onAction="#runModel" prefHeight="47.0" prefWidth="110.0" style="-fx-background-color: #1bf2b9; -fx-background-radius: 15;" text="Go" />
+      <Circle fill="RED" layoutX="777.0" layoutY="23.0" onMouseClicked="#close" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#fcfc00" layoutX="748.0" layoutY="23.0" onMouseClicked="#minimize" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="modelAddress" layoutX="282.0" layoutY="173.0" prefHeight="47.0" prefWidth="236.0" text=" " textFill="WHITE" />
+      <Label fx:id="DemoFileAddress" layoutX="296.0" layoutY="277.0" prefHeight="47.0" prefWidth="236.0" text=" " textFill="WHITE" />
+   </children>
+</AnchorPane>
