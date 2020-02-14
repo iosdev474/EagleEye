@@ -1,0 +1,10 @@
+.idea
+*.iml
+*.ipr
+out
+.idea_modules
+*.class
+*.log
+*.jar
+*.zip
+*.tar.gz
