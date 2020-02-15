@@ -23,12 +23,10 @@ fs.readFile(process.argv[2], (err, buffer) => {
         header = "name,team,kills,deaths,attacker_x,attacker_y,attacker_z,attacker_pitch,attacker_yaw,attacker_ducked,victim_x,victim_y,victim_z,victim_pitch,victim_yaw,victim_ducked,wallbang,isHeadshot,isHacker\n";
         fs.appendFile(process.argv[4], header, (err) => {
           if (err) console.log(err);
-          console.log(header + "Successfully Written to File.\n");
         });
       }*/
       fs.appendFile(process.argv[4], data, (err) => {
         if (err) console.log(err);
-        console.log(data + "Successfully Written to File.\n");
       });
     }
   });
