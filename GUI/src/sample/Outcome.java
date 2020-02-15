@@ -1,15 +1,15 @@
 package sample;
 
-import com.google.gson.Gson;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class Outcome {
 
@@ -36,23 +36,26 @@ public class Outcome {
 
     @FXML
     void close(MouseEvent event) {
-
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.close();
     }
 
     @FXML
     void minimize(MouseEvent event) {
-
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.toBack();
     }
 
     public void initialize() {
-        Gson gson = new Gson();
-        String input="{\"pname\": \"p1\",\"team\": \"ct\",\"kill\": 2,\"death\": 3,\"ishacker\": 0}";
-        PlayerInfo playerInfo = gson.fromJson(input, PlayerInfo.class);
-        pname.setText(playerInfo.pname);
-        pkill.setText("Kills: " + playerInfo.kill);
-        pdeath.setText("Deaths: " + playerInfo.death);
+
+//        Gson gson = new Gson();
+        String input="{\"p1\",\"ct\",2,3,0}";
+//        PlayerInfo playerInfo = gson.fromJson(input, PlayerInfo.class);
+        pname.setText(input.split(",")[0].split("\"")[1]);
+        pkill.setText("Kills: " + input.split(",")[2]);
+        pdeath.setText("Deaths: " + input.split(",")[3]);
         status.setText("");
-        if(playerInfo.ishacker == 1) {
+        if(Integer.parseInt(input.split(",")[4].split("}")[0]) == 1) {
             p.setImage(new Image("sample/cross.png"));
         } else {
             p.setImage(new Image("sample/tick.png"));
