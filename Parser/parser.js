@@ -28,7 +28,7 @@ fs.readFile(process.argv[2], (err, buffer) => {
       }*/
       fs.appendFile(process.argv[4], data, (err) => {
         if (err) console.log(err);
-        console.log(data + "Successfully Written to File.\n");
+        //console.log(data + "Successfully Written to File.\n");
       });
     }
   });
