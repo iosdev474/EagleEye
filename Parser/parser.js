@@ -32,6 +32,5 @@ fs.readFile(process.argv[2], (err, buffer) => {
       });
     }
   });
-
   demoFile.parse(buffer);
 });
