@@ -7,33 +7,36 @@
 
 
 
-## Introduction
+## Introduction:
   The gaming community of today faces one common problem : Hackers. Although each multiplayer games comes equipped with a anti-cheat system, these system are not able to detect hackers using external cheats. The way these hackers are detected are by reporting them and then manually watching the gameplay of the player to determine if the person is a hacker or not. This is where EagleEye comes in. With EagleEye, we aim to automate the detection of these hackers by using demo file created of the match and finding inconsitencies in the player play pattern.
   
 ## Table of Contents:
 
-1) [Features](#fet)
+1) [Requirements](#ret)
 2) [Technology Stack](#depend)
 3) [Feedback](#feed)
 4) [Contribute](#contri)
 
-<a name="fet"></a>
-## Features
-  * Parsing of Demo File created by the game
+<a name="ret"></a>
+## Requirements:
+* Scikit-Learn
+* Pandas
+* <a href="https://github.com/saul/demofile">DemoFile</a>
+* Jfoenix
   
 <a name="depend"></a>
-## Technology Stack
+## Technology Stack:
   1) Node.JS
   2) Google Collab
-  3) Jfoenix
+  3) Javafx
   4) Machine Learning
   
   <a name="feed"></a>
-## Feedback
+## Feedback:
 Feel free to file an issue if you come across any bugs
 
 <a name="contri"></a>
-## Contribute
+## Contribute:
 * Feel free to report issues and bugs. It will be helpful for future lauches of the application
 * All suggestions are welcome
 * Fork repository and contribute
@@ -47,9 +50,9 @@ Feel free to file an issue if you come across any bugs
 
 
 ### Made at:
-Hack36
+<img src="hack36.png">
 
-~~BUILD IN PROGRESS~~
+~~ BUILD IN PROGRESS :-) 
  
   
  
