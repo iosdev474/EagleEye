@@ -124,7 +124,7 @@ public class Controller {
             }
                 Parent home_parent = null;
                 try {
-                    home_parent = FXMLLoader.load(getClass().getResource("Outcome.fxml"));
+                    home_parent = FXMLLoader.load(getClass().getResource("../sample/Outcome.fxml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
