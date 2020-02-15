@@ -1,4 +1,4 @@
-<h1 align="center">EagleEye[INCOMPLETE right now]</h1>
+<h1 align="center">EagleEye</h1>
 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
@@ -46,7 +46,9 @@ Feel free to file an issue if you come across any bugs
 
 
 ### Made at:
+Hack36
 
+~~BUILD IN PROGRESS~~
  
   
  
