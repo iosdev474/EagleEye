@@ -1,11 +1,14 @@
 package sample;
 
-import com.jfoenix.controls.JFXButton;
+import com.google.gson.Gson;
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
 public class Outcome {
@@ -14,133 +17,22 @@ public class Outcome {
     private AnchorPane back;
 
     @FXML
-    private Pane ct;
+    private Circle userImage;
 
     @FXML
-    private ImageView p1;
+    private Text status;
 
     @FXML
-    private Text p1kill;
+    private Text pkill;
 
     @FXML
-    private Text p1death;
+    private Text pdeath;
 
     @FXML
-    private Text p1name;
+    private Text pname;
 
     @FXML
-    private ImageView p2;
-
-    @FXML
-    private Text p2kill;
-
-    @FXML
-    private Text p2death;
-
-    @FXML
-    private Text p2name;
-
-    @FXML
-    private ImageView p3;
-
-    @FXML
-    private Text p3kill;
-
-    @FXML
-    private Text p3death;
-
-    @FXML
-    private Text p3name;
-
-    @FXML
-    private ImageView p4;
-
-    @FXML
-    private Text p4kill;
-
-    @FXML
-    private Text p4death;
-
-    @FXML
-    private Text p4name;
-
-    @FXML
-    private ImageView p5;
-
-    @FXML
-    private Text p5kill;
-
-    @FXML
-    private Text p5death;
-
-    @FXML
-    private Text p5name;
-
-    @FXML
-    private Pane t;
-
-    @FXML
-    private ImageView p6;
-
-    @FXML
-    private Text p6kill;
-
-    @FXML
-    private Text p6death;
-
-    @FXML
-    private Text p6name;
-
-    @FXML
-    private ImageView p7;
-
-    @FXML
-    private Text p7kill;
-
-    @FXML
-    private Text p7death;
-
-    @FXML
-    private Text p7name;
-
-    @FXML
-    private ImageView p8;
-
-    @FXML
-    private Text p8kill;
-
-    @FXML
-    private Text p8death;
-
-    @FXML
-    private Text p8name;
-
-    @FXML
-    private ImageView p9;
-
-    @FXML
-    private Text p9kill;
-
-    @FXML
-    private Text p9death;
-
-    @FXML
-    private Text p9name;
-
-    @FXML
-    private JFXButton p1more31;
-
-    @FXML
-    private ImageView p10;
-
-    @FXML
-    private Text p10kill;
-
-    @FXML
-    private Text p10death;
-
-    @FXML
-    private Text p10name;
+    private ImageView p;
 
     @FXML
     void close(MouseEvent event) {
@@ -152,8 +44,20 @@ public class Outcome {
 
     }
 
-    void initialize() {
-        
+    public void initialize() {
+        Gson gson = new Gson();
+        String input="{\"pname\": \"p1\",\"team\": \"ct\",\"kill\": 2,\"death\": 3,\"ishacker\": 0}";
+        PlayerInfo playerInfo = gson.fromJson(input, PlayerInfo.class);
+        pname.setText(playerInfo.pname);
+        pkill.setText("Kills: " + playerInfo.kill);
+        pdeath.setText("Deaths: " + playerInfo.death);
+        status.setText("");
+        if(playerInfo.ishacker == 1) {
+            p.setImage(new Image("sample/cross.png"));
+        } else {
+            p.setImage(new Image("sample/tick.png"));
+        }
+        userImage.setFill(new ImagePattern(new Image("sample/1.jpg")));
     }
 
 }
