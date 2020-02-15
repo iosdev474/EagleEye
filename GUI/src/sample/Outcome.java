@@ -3,7 +3,10 @@ package sample;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -17,9 +20,6 @@ import javafx.stage.Stage;
 import java.io.*;
 
 public class Outcome {
-
-    @FXML
-    private AnchorPane back;
 
     @FXML
     private Circle userImage;
@@ -77,8 +77,19 @@ public class Outcome {
     }
 
     @FXML
-    void more(ActionEvent event) {
-        System.out.println("More info...");
+   void back(ActionEvent event){
+
+        Parent home_parent = null;
+        try {
+            home_parent = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene Home = new Scene(home_parent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(Home);
+        window.show();
     }
 
 }

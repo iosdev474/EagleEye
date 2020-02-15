@@ -54,11 +54,15 @@ Y_predict=model.predict(X_test)
 
 Y_Predict=Y_predict.tolist()
 # In[22]:
+count = 0
+for x in Y_Predict:
+    if x==1:
+        count+=1
 
-
-unique,count= np.unique(Y_Predict,return_counts=True)
-total=count[0]+count[1]
-hack_chance=count[1]*100/total
+hack_chance = count/len(Y_Predict) * 100
+#unique,count= np.unique(Y_Predict,return_counts=True)
+#total=count[0]+count[1]
+#hack_chance=count[1]*100/total
 flag=0
 if(hack_chance>=30):
     flag=1
