@@ -3,7 +3,7 @@ package sample;
 public class PlayerInfo {
     String pname;
     String team;
-    int kill;
-    int death;
-    int ishacker;
+    int kills;
+    int deaths;
+    int isHacker;
 }
