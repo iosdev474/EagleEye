@@ -1,5 +1,6 @@
 package sample;
 
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.omg.SendingContext.RunTime;
-
 import java.io.*;
-import java.util.ArrayList;
 
 public class Controller {
 
@@ -22,7 +20,7 @@ public class Controller {
     Label DemoFileAddress;
 
     @FXML
-    Label modelAddress;
+    JFXTextField playerName;
 
     @FXML
     void close(MouseEvent event) {
@@ -54,23 +52,7 @@ public class Controller {
         window.toBack();
     }
 
-    @FXML
-    void modelSelect(ActionEvent event) {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Select Model File");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Model Files", "*.py"));
-        File file = fileChooser.showOpenDialog((Stage) ((Node) (event.getSource())).getScene().getWindow());
-        if (file != null) {
-            if (file.exists()) {
-                modelAddress.setText(file.getAbsolutePath());
-            } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("No File Found");
-                alert.setContentText("No file was found or none were selected");
-                alert.showAndWait();
-            }
-        }
-    }
+
 
     @FXML
     void runModel(ActionEvent event) throws IOException {
@@ -93,7 +75,7 @@ public class Controller {
             sb[0] = "node";
             sb[1] = "../Parser/parser.js";
             sb[2] = (DemoFileAddress.getText());
-            sb[3] = ("PyroManiac");
+            sb[3] = (playerName.getText());
             sb[4] = ("../Dataset/test.csv");
             try {
                 Process p = Runtime.getRuntime().exec(sb);
@@ -124,7 +106,7 @@ public class Controller {
             }
                 Parent home_parent = null;
                 try {
-                    home_parent = FXMLLoader.load(getClass().getResource("../sample/Outcome.fxml"));
+                    home_parent = FXMLLoader.load(getClass().getResource("Outcome.fxml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

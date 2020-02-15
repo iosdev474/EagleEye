@@ -58,16 +58,7 @@ public class Outcome {
 
         Gson gson = new Gson();
         try {
-            FileInputStream fis = new FileInputStream("../Model/Output.json");
-            byte[] buffer = new byte[10];
-            StringBuilder sb = new StringBuilder();
-            while (fis.read(buffer) != -1) {
-                sb.append(new String(buffer));
-                buffer = new byte[10];
-            }
-            fis.close();
-            String input = sb.toString();
-            PlayerInfo playerInfo = gson.fromJson(input, PlayerInfo.class);
+            PlayerInfo playerInfo = gson.fromJson(new FileReader("../Model/Output.json"), PlayerInfo.class);
             pname.setText(playerInfo.pname);
             pkill.setText("Kills: " + playerInfo.kills);
             pdeath.setText("Deaths: " + playerInfo.deaths);
